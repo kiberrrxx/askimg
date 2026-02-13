@@ -92,7 +92,14 @@ askimg -w 75 -h 75 -o art.txt image.png
 # Created with ❤️ for the Linux community.
 
 
-![Preview](screenshots/preview.png)
-![Preview](screenshots/preview1.png)
-![Preview](screenshots/preview2.png)
-![Preview](screenshots/preview3.png)
+## 🖼️ Gallery
+
+<p align="center">
+ <img src="screenshots/prewiew.png" width="800px" alt="Screenshot 1"/>
+ <br>
+ <img src="screenshots/prewiew1.png" width="800px" alt="Screenshot 2"/>
+ <br>
+ <img src="screenshots/prewiew2.png" width="800px" alt="Screenshot 3"/>
+ <br>
+ <img src="screenshots/prewiew3.png" width="800px" alt="Screenshot 4"/>
+</p>
