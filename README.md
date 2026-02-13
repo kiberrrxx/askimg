@@ -1,59 +1,116 @@
 # 🎨 askimg
 
-A high-performance ASCII art generator written in C++ for Linux. 
-Powered by **ImageMagick 7** for universal format support.
+![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)
+![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Android-blue)
 
-## ✨ Features
-- **TrueColor Support**: Renders images using 24-bit ANSI colors.
-- **Deep Precision**: Uses a 70-character palette for insane detail.
-- **Ultra-Compatible**: Handles PNG, JPG, WebP, BMP, and more via Magick++.
-- **Custom Geometry**: Manual width and height control.
+A high-performance CLI tool to convert images into vibrant ASCII art. 
+Optimized for **Linux**, **macOS**, and **Termux (Android)** with TrueColor support and ImageMagick 7.
 
-## 🚀 Installation
+---
 
-### 1. Install Dependencies
+### ✏️ 🎨 Why askimg?
 
-#### **Gentoo**
+*  **Magick++ Engine**: Supports JPG, PNG, WebP, GIF, SVG, and more.
+*  **Precision Palette**: Uses a 70-character density map for better shading.
+*  **Hyprland-inspired UI**: Beautifully colored help and error messages.
 
-Ensure ImageMagick is built with `cxx`, `jpeg`, and `png` flags:
+---
 
-# Add flags to /etc/portage/package.use/imagemagick:
-media-gfx/imagemagick cxx jpeg png webp
+## 🖼️ Gallery
 
-```shell
-sudo emerge --ask media-gfx/imagemagick
-```
+<p align="center">
+ <img src="screenshots/preview.png" width="800px" alt="Screenshot 1"/>
+ <br>
+ <img src="screenshots/preview1.png" width="800px" alt="Screenshot 2"/>
+ <br>
+ <img src="screenshots/preview2.png" width="800px" alt="Screenshot 3"/>
+ <br>
+ <img src="screenshots/preview3.png" width="800px" alt="Screenshot 4"/>
+</p>
 
-#### 🔖 Arch Linux
+---
 
-```shell
-sudo pacman -S imagemagick
-```
+### 🛠️ Building from Source
 
-#### Debian / Ubuntu / Mint
+Since `askimg` relies on ImageMagick, building from source is the recommended method to ensure compatibility across different architectures.
 
-```shell
-sudo apt install libmagick++-dev
-```
+### Prerequisites
 
-#### Fedora / Red Hat
+You need a C++ compiler (`g++` or `clang++`), `make`, and `ImageMagick` development headers.
 
-```shell
-sudo dnf install ImageMagick-c++-devel
-```
+#### 🐧 Linux
 
-### 📚 2. Build and Install
+**Gentoo** (ensure flags: `cxx jpeg png webp`):
 
 ```bash
-git clone https://github.com/your-username/askimg.git
-cd askimg
-make
-sudo make install --prefix=/usr
+doas emerge --ask media-gfx/imagemagick dev-util/pkgconf
 ```
 
-##### The binary will be installed to /usr/bin/askimg.
+**Arch Linux**:
 
-### ✏️ 🛠 Usage
+```bash
+sudo pacman -S base-devel imagemagick
+```
+
+**Debian / Ubuntu / Mint**:
+
+```bash
+sudo apt update && sudo apt install build-essential pkg-config libmagick++-dev
+```
+
+**Fedora**:
+
+```bash
+sudo dnf install make automake gcc gcc-c++ kernel-devel ImageMagick-c++-devel
+```
+
+**🔖 🍏 macOS**
+# Install via Homebrew:
+
+```brew
+brew install imagemagick pkg-config make
+```
+
+
+**🔖 🤖 Android (Termux)**
+
+# Open Termux and run:
+
+```bash
+pkg update && pkg upgrade
+pkg install clang make pkg-config imagemagick
+```
+
+————————
+
+### 📚 Compilation & Installation
+
+# Once dependencies are installed, the process is the same for all platforms:
+
+# 1. Clone the repository:
+
+```bash
+git clone https://github.com/kiberrrxx/askimg.git
+cd askimg
+```
+
+# 2. Build:
+
+```bash
+make
+```
+
+# 3. Install (Global):
+
+```bash
+sudo make install PREFIX=/usr
+```
+
+# (On Termux, just run make install, do not use sudo or prefix).
+
+————————
+
+##✏️ 🚀 Usage
 
 ```shell
 Flag      | Description                        
@@ -62,44 +119,30 @@ Flag      | Description
 -h <n>    | Set height (overrides auto-scaling)
 -c        | TrueColor mode (24-bit ANSI)       
 -i        | Invert luminance                   
--o <file> | Save clean ASCII text to a file
+-o <file> | Save clean ASCII text to a file    
+-v        | Show version                       
 ```
 
-### 📚 Examples:
+##📚 📚 Examples:
 
-# View image in terminal with colors:
+#View image in terminal with colors:
 
-```shell
+```bash
 askimg -c -w 120 photo.jpg
 ```
 
-Convert to 75x75 square and save to file:
+# Convert to 75x75 square and save to file:
 
-```shell
+```bash
 askimg -w 75 -h 75 -o art.txt image.png
 ```
 
-### ✏️ 🎨 Why askimg?
-
-⦁ Magick++ Engine: Supports JPG, PNG, WebP, GIF, SVG, and more.
-⦁ Precision Palette: Uses a 70-character density map for better shading.
-⦁ Hyprland-inspired UI: Beautifully colored help and error messages.
-
 ————————
 
-### Made, written and compiled by me (kiberrrxx)
+### 📚 Made, written and compiled by me (kiberrrxx)
 
-# Created with ❤️ for the Linux community.
+### 📌 Created with ❤️ for the Linux community.
 
+## ✏️ 📄 License
 
-## 🖼️ Gallery
-
-<p align="center">
- <img src="screenshots/prewiew.png" width="800px" alt="Screenshot 1"/>
- <br>
- <img src="screenshots/prewiew1.png" width="800px" alt="Screenshot 2"/>
- <br>
- <img src="screenshots/prewiew2.png" width="800px" alt="Screenshot 3"/>
- <br>
- <img src="screenshots/prewiew3.png" width="800px" alt="Screenshot 4"/>
-</p>
+# This project is licensed under the MIT License - see the LICENSE file for details.
