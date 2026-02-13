@@ -19,13 +19,13 @@ Optimized for **Linux**, **macOS**, and **Termux (Android)** with TrueColor supp
 ## 🖼️ Gallery
 
 <p align="center">
- <img src="screenshots/preview.png" width="800px" alt="Screenshot 1"/>
+ <img src="screenshots/1.png" width="800px" alt="Screenshot 1"/>
  <br>
- <img src="screenshots/preview1.png" width="800px" alt="Screenshot 2"/>
+ <img src="screenshots/2.png" width="800px" alt="Screenshot 2"/>
  <br>
- <img src="screenshots/preview2.png" width="800px" alt="Screenshot 3"/>
+ <img src="screenshots/3.png" width="800px" alt="Screenshot 3"/>
  <br>
- <img src="screenshots/preview3.png" width="800px" alt="Screenshot 4"/>
+ <img src="screenshots/4.png" width="800px" alt="Screenshot 4"/>
 </p>
 
 ---
