@@ -29,7 +29,7 @@ You need a C++ compiler (`g++` or `clang++`), `make`, and `ImageMagick` developm
 **Gentoo** (ensure flags: `cxx jpeg png webp`):
 
 ```bash
-doas emerge --ask media-gfx/imagemagick dev-util/pkgconf
+sudo emerge --ask media-gfx/imagemagick dev-util/pkgconf
 ```
 
 **Arch Linux**:
