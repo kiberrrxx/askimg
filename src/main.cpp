@@ -1,6 +1,6 @@
 #include <iostream>
 #include <getopt.h>
-#include "ascii.h"
+#include "ascii.hpp"
 
 // Цвета в стиле Hyprland
 #define HYPR_MAGENTA "\033[1;38;2;237;145;231m"
@@ -16,7 +16,7 @@ void print_help() {
        << "               |___/ " << RESET << "\n\n";
 
   std::cout << HYPR_CYAN << "Usage: " << RESET << "askimg [options] <file>\n\n";
-  
+
   std::cout << HYPR_MAGENTA << "Options:\n" << RESET
        << " " << HYPR_CYAN << "-w <n>" << RESET << " Width of the output\n"
        << " " << HYPR_CYAN << "-h <n>" << RESET << " Height of the output\n"

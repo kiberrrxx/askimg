@@ -2,7 +2,7 @@
 #include <fstream>
 #include <cstring>
 #include <Magick++.h>
-#include "ascii.h"
+#include "ascii.hpp"
 
 using namespace Magick;
 
